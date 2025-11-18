@@ -13,9 +13,8 @@ body {
 }
 
 /* ============================================
-   NAVBAR PERSONALIZADA + BOOTSTRAP
+   NAVBAR PERSONALIZADA 
 ============================================ */
-/* LINKS NAVBAR — EFECTO ANIMADO */
 .navbar-brand img {
   width: 55px;
   border-radius: 50%;
@@ -28,158 +27,130 @@ body {
   font-size: 1.05rem;
   color: #000 !important;
   padding: 5px 0;
+  margin: 0 15px;
   transition: color 0.3s ease;
 }
 
-/* Línea animada */
+/* Línea animada CORREGIDA */
 .navbar-nav .nav-link::after {
   content: "";
   position: absolute;
-  bottom: -4px;
+  bottom: 0;
   left: 0;
   width: 0%;
   height: 3px;
-  background-color: #e10600; /* rojo deportivo */
+  background-color: #e10600;
   transition: width 0.25s ease-in-out;
   border-radius: 2px;
 }
 
-/* Hover: muestra la línea */
 .navbar-nav .nav-link:hover::after {
   width: 100%;
 }
 
-/* Hover color */
 .navbar-nav .nav-link:hover {
   color: #e10600 !important;
 }
 
-/* Activo: línea siempre visible */
 .navbar-nav .nav-link.active::after {
   width: 100%;
 }
 
-/* Activo: color destacado */
 .navbar-nav .nav-link.active {
   color: #e10600 !important;
   font-weight: 700;
 }
-/* --- Sección texto + imagen --- */
-.contenido {
+
+/* ============================================
+   CARRUSEL BOOTSTRAP PERSONALIZADO
+============================================ */
+.carousel-item {
+  padding: 40px 0;
+  min-height: 500px;
+}
+
+/* Contenedor principal del carrusel */
+.carousel-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 60px 100px;
-  background-color: #fff;
-  margin-top: 20px;
-  gap: 40px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.texto {
+.carousel-text {
   flex: 1;
+  padding: 20px;
 }
 
-.texto h2 {
-  color: #004aad;
-  margin-bottom: 15px;
-}
-
-.texto p {
-  line-height: 1.6;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-.imagen {
+.carousel-image {
   flex: 1;
+  text-align: center;
 }
 
-.imagen img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+.carousel-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Indicadores personalizados */
+.carousel-indicators {
+  bottom: -50px;
+}
 
-.blog {
-    position: relative;
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+/* Controles de navegación */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 768px) {
+  .carousel-content {
+    flex-direction: column;
+  }
+  
+  .carousel-item {
+    min-height: 600px;
+  }
+  
+  .carousel-text,
+  .carousel-image {
+    flex: none;
     width: 100%;
-    height: 60vh;
+  }
 }
 
-
-.texto-1 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background-color: #2e2e2e;
-    color: white;
-    padding: 50px;
-}
-
-.texto-2 {
-  position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background-color: white;
-    color: black;
-    padding: 50px;
-}
-
-
-.texto-1 h1,
-.texto-2 h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-
-.texto-1 p 
-.texto-2 p{
-    margin-bottom: 15px;
-}
-
-.imagen-1 {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-
-}
-
-.imagen-2 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.imagen-1 img,
-.imagen-2 img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Footer */
+/* ============================================
+   FOOTER
+============================================ */
 footer {
-    background-color: darkcyan;
-    color: white;
-    text-align: center;
-    padding: 20px 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
+  background-color: darkcyan;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
+footer a {
+  color: white;
+  text-decoration: none;
+}
 
-/* style = "background-color: rgba(220, 227, 255, 0.261);" text-align:center; padding:15px; margin-top:20px;" */
+footer a:hover {
+  text-decoration: underline;
+}

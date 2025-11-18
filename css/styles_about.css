@@ -351,3 +351,39 @@ footer {
   color: #2e2e2e;
   border-bottom: 1px solid #2e2e2e;
 }
+
+/* Tamaño uniforme de las imágenes de perfil */
+.foto-perfil {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Tarjetas con altura consistente */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Distribución interna ordenada */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px; /* Ajusta según la cantidad de texto */
+    padding-bottom: 20px;
+}
+
+/* Espaciado del texto */
+.card-text {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Íconos siempre al final */
+.redes {
+    margin-top: auto;
+    padding-top: 10px;
+}
