@@ -1,0 +1,353 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Century Gothic", sans-serif;
+}
+
+/* === HEADER PRINCIPAL === */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo - Menú - Extras */
+  align-items: center;
+  padding: 10px 50px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* LOGO */
+.logo img {
+  width: 120px;
+}
+
+/* MENÚ CENTRAL */
+.menu {
+  display: flex;
+  gap: 25px;
+}
+
+/* ============================
+   ESTILOS GENERALES
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.6;
+}
+
+
+
+/* ============================
+   SECCIONES GENERALES
+============================ */
+main section {
+  padding: 80px 10%;
+}
+
+h1, h2, h3 {
+  color: #00224d;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* ============================
+   QUIÉNES SOMOS
+============================ */
+
+.quienes-somos {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 50px 10%; /* 🔽 mucho más pequeño */
+  background: url('../img_miembros/quienes_somos.png') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px; /* 🔽 altura total más compacta */
+}
+
+/* Filtro oscuro */
+.quienes-somos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.quienes-somos .contenido {
+  position: relative;
+  z-index: 1;
+}
+
+.quienes-somos h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.quienes-somos p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #eaeaea;
+}
+
+
+/* ============================
+   HISTORIA
+============================ */
+.historia {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.historia img {
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.historia .contenido {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* ============================
+   VALORES
+============================ */
+.valores {
+  background: #f4f7fb;
+  border-top: 3px solid #00bcd4;
+  border-bottom: 3px solid #00bcd4;
+}
+
+.valores ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.valores li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+.valores li::before {
+  content: "⚽";
+  position: absolute;
+  left: 0;
+  color: #00bcd4;
+  font-size: 1.2rem;
+}
+
+/* ============================
+   EQUIPO
+============================ */
+.equipo {
+  background: #fff;
+  text-align: center;
+}
+
+.tarjetas-equipo {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: flex-start;
+  gap: 40px; /* espacio entre tarjetas */
+  flex-wrap: nowrap; /* 🔥 evita que bajen de línea */
+  overflow-x: auto; /* agrega scroll si no caben */
+  margin-top: 40px;
+  padding-bottom: 20px;
+}
+
+/* Opcional: mejora la experiencia al hacer scroll horizontal */
+.tarjetas-equipo::-webkit-scrollbar {
+  height: 8px;
+}
+.tarjetas-equipo::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+
+.tarjeta {
+  background: #f8f8f8;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+  color: #00224d;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.tarjeta p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* ============================
+   CTA FINAL
+============================ */
+.about-cta {
+  background: linear-gradient(135deg, #00224d, #0078d7);
+  color: #fff;
+  text-align: center;
+  padding: 100px 10%;
+}
+
+.about-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.about-cta p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.about-cta .btn {
+  display: inline-block;
+  background: #00bcd4;
+  color: #fff;
+  padding: 12px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.about-cta .btn:hover {
+  background: #00a0b3;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 768px) {
+  .historia {
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    margin-top: 10px;
+  }
+
+  .menu a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
+
+.quienes-somos {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 180px 10%;
+  background: url('../img_miembros/quienes_somos.png') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Agrega un overlay (filtro oscuro para resaltar el texto) */
+.quienes-somos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55); /* oscurece el fondo */
+  z-index: 0;
+}
+
+/* Asegura que el texto esté encima del overlay */
+.quienes-somos .contenido {
+  position: relative;
+  z-index: 1;
+}
+
+.quienes-somos h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.quienes-somos p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #eaeaea;
+}
+
+
+/* Footer */
+footer {
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.menu a {
+  text-decoration: none;
+}
+.menu a:hover {
+  color: #2e2e2e;
+  border-bottom: 1px solid #2e2e2e;
+}
