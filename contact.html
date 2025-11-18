@@ -14,35 +14,63 @@
     />
   </head>
   <body>
-    <header class="navbar">
-      <div class="logo">
-        <img src="img/logo.png" alt="LocosDelFutbol" />
-      </div>
-      <!-- Logo -->
-      <!-- Menú principal -->
-      <nav class="menu">
-        <a href="index.html">Inicio</a>
-        <a href="about.html">Acerca de Nosotros</a>
-        <a href="contact.html">Contactenos</a>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white shadow-lg border-bottom px-3"
+      >
+        <!-- LOGO -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="img/logo.png"
+            alt="LocosDelFutbol"
+            width="50"
+            class="me-2"
+          />
+          <span class="fw-bold text-dark">Fútbol Loco</span>
+        </a>
+
+        <!-- MENÚ -->
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">Acerca de Nosotros</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link active">Contáctenos</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <section class="hero">
-      <img src="img/contact_hero.webp" alt="Imagen de fútbol" />
+    <section class="container-fluid px-0">
+      <img
+        src="img/contact_hero.jpg"
+        alt="Imagen de fútbol"
+        class="img-fluid w-100"
+      />
     </section>
-    <section class="cliente">
-      <h2>ATENCIÓN AL CLIENTE</h2>
-      <p>Lunes a Viernes</p>
-      <p>11:00AM - 3:00PM</p>
+
+    <section class="text-center mt-5">
+      <h2 class="h2 text-danger">ATENCIÓN AL CLIENTE</h2>
+      <p class="fs-3">Lunes a Viernes</p>
+      <p class="fs-4">11:00AM - 3:00PM</p>
     </section>
-    <hr />
-    <section class="info">
+    <div class="container m-auto w-50 mt-5">
+      <hr class="border border-danger border-1 opacity-50" />
+    </div>
+    <section class="d-flex justify-content-around mt-5 text-center">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
+          width="42"
+          height="42"
           fill="currentColor"
-          class="bi bi-telephone-fill"
+          class="bi bi-telephone-fill text-danger"
           viewBox="0 0 16 16"
         >
           <path
@@ -51,15 +79,15 @@
           />
         </svg>
         <h2>Teléfono</h2>
-        <p>+57 450 471 745</p>
+        <p class="fs-5">+57 450 471 745</p>
       </div>
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
+          width="42"
+          height="42"
           fill="currentColor"
-          class="bi bi-envelope-fill"
+          class="bi bi-envelope-fill text-danger"
           viewBox="0 0 16 16"
         >
           <path
@@ -67,15 +95,15 @@
           />
         </svg>
         <h2>E-mail</h2>
-        <p>info@futbol-loco.com</p>
+        <p class="fs-5">info@futbol-loco.com</p>
       </div>
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
+          width="42"
+          height="42"
           fill="currentColor"
-          class="bi bi-whatsapp"
+          class="bi bi-whatsapp text-danger"
           viewBox="0 0 16 16"
         >
           <path
@@ -83,14 +111,17 @@
           />
         </svg>
         <h2>WhatsApp</h2>
-        <p>+57 450 268 321</p>
+        <p class="fs-5">+57 450 268 321</p>
       </div>
     </section>
-    <div class="text-success m-auto">
-      <hr class="" />
+    <div class="container m-auto w-50 mt-5">
+      <hr class="border border-danger border-1 opacity-50" />
     </div>
+
     <section class="container w-50 mt-5 mb-5">
-      <form class="row g-3 border-1 border-info form-container border-danger">
+      <form
+        class="row g-3 border-1 border-info form-container border-danger mt-5"
+      >
         <div class="col-12">
           <label for="fname" class="form-label">Nombre</label><br />
           <input
